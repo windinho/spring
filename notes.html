@@ -5,6 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="toggle.css">
 	<style type="text/css">
+	.card {
+		margin: 20px;
+	}
 	nav {
 		background: #eee;
 	}
@@ -17,17 +20,53 @@
 		margin-top: 30px;
 	}
 	hr {
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 20px !important;
+		margin-right: 20px !important;
+		background: #ddd;
 	}
 	#tog {
 		margin-top: 8px;
 	}
+	.green {
+		color: #5caa53;
+	}
+	.total {
+		display: inline;
+	}
+	#service {
+		padding-left: 0;
+	}
+	.box {
+		border: 1px solid;
+		padding: 30px 0;
+		margin: 0 100px;
+	}
+	.marg0 {
+		margin: 0;
+	}
+	p, textarea {
+		margin-left: 26px;
+	}
+	.last {
+		border-top: 1px solid #ddd;
+	}
+	.btn-primary, .btn-warning {
+		width: 178px;
+	}
+	.buttons {
+		margin-top: 80px;
+	}
+	textarea {
+		height: 100px;
+	}
 </style>
 </head>
 <body>
+	<div class="card">
 	<nav class="nav">
-		<h3 class="title"><b>Recurring Lawn Mowing</b></h3>
+		<div class="container-fluid">
+			<h3 class="title"><b>Recurring Lawn Mowing</b></h3>
+		</div>
 	</nav>
 	<div class="container">
 		<div class="row details">
@@ -73,10 +112,13 @@
 				<div class="form-group row">
 					<label class="col-sm-6 col-form-label text-right"><b>Recurring Interval</b></label>
 					<div class="col-sm-6">
-						<div class="dropdown">
-							<button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" >
-								14
-							</button>
+						<div class="input-group">
+							<input type="text" class="form-control" value="14">
+							<div class="input-group-append">
+								<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+									<span class="sr-only">Toggle Dropdown</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -84,27 +126,167 @@
 					<label class="col-sm-6 col-form-label text-right"><b>Pause Service</b></label>
 					<div class="col-sm-6">
 						<div id="tog">Off
-						<label class="switch">
-							<input type="checkbox" checked>
-							<span class="slider round"></span>
-						</label>
-						On / Activate
+							<label class="switch">
+								<input type="checkbox" checked>
+								<span class="slider round"></span>
+							</label>
+							On / Activate
 						</div>
 					</div>
 				</div>
 				<div class="form-group row">
 					<label class="col-sm-6 col-form-label text-right"><b>Grass Length</b></label>
 					<div class="col-sm-6">
-						<div class="dropdown">
-							<button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" >
-								Less than 4 in
-							</button>
+						<div class="input-group">
+							<input type="text" class="form-control" value="Less than 4 in">
+							<div class="input-group-append">
+								<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+									<span class="sr-only">Toggle Dropdown</span>
+								</button>
+							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="text-center box">
+					<b>Lawn Mow Total</b><br>
+					<div class="row">
+						<div class="col-sm-8 text-right">
+							<span class="green"><sup>$</sup></span>
+							<h1 class="green total">XX.00</h1>
+						</div>
+						<div id="service" class="col-sm-4 green text-left">per <br>service</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<hr>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-7 border-right">
+				<h3 class="title"><b>Manage Add Ons</b></h3>
+				<p>The customer can also manage these in their active jobs by tapping the word manage. These will remain on the order until turned off.</p>
+				<div class="row">
+					<div class="col-md-7">
+						<div class="form-group row">
+							<label class="col-sm-6 col-form-label text-right"><b>Flower Bed Clean Up</b><br>$XX.00</label>
+							<div class="col-sm-6">
+								<div id="tog">Off
+									<label class="switch">
+										<input type="checkbox" checked>
+										<span class="slider round"></span>
+									</label>
+									On
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="form-group row">
+							<label class="col-sm-6 col-form-label text-right"><b>Edging</b><br>$XX.00</label>
+							<div class="col-sm-6">
+								<div id="tog">Off
+									<label class="switch">
+										<input type="checkbox" checked>
+										<span class="slider round"></span>
+									</label>
+									On
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="form-group row">
+							<label class="col-sm-6 col-form-label text-right"><b>Clean Up Clippings</b><br>$XX.00</label>
+							<div class="col-sm-6">
+								<div id="tog">Off
+									<label class="switch">
+										<input type="checkbox" checked>
+										<span class="slider round"></span>
+									</label>
+									On
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center col-md-4">
+						<div class="box marg0">
+							<b>Add On Total</b><br>
+							<div class="row">
+								<div class="col-sm-8 text-right">
+									<span class="green"><sup>$</sup></span>
+									<h1 class="green total">XX.00</h1>
+								</div>
+								<div id="service" class="col-sm-4 green text-left">per <br>service</div>
+							</div>
+						</div>
+						<a href="#">View Add On Descriptions ></a>
+					</div>
+				</div>
+				<hr>
+				<h3 class="title">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="customCheck1">
+						<label class="custom-control-label" for="customCheck1">
+							<b>"Delete" Job From Customers App</b>
+						</label>
+					</div>
+				</h3>
+				<p>Checking this box will hide the recurring order from this customer's app. Always offer to pause first and only use this if they are requesting to delete.</p>
+			</div>
+			<div class="col-sm-5">
+				<h3 class="title"><b>Order Summary</b></h3>
+				<p>If the price is showing $0.00, the selection is off</p>
+				<div class="container">
+				<table class="table table-borderless">
+					<tr>
+						<th scope="row">Lawn Mow</th>
+						<td>$XX.00</td>
+					</tr>
+					<tr>
+						<th scope="row">Flower Bed Clean Up</th>
+						<td>$XX.00</td>
+					</tr>
+					<tr>
+						<th scope="row">Edging</th>
+						<td>$XX.00</td>
+					</tr>
+					<tr>
+						<th scope="row">Clean Up Clippings</th>
+						<td>$XX.00</td>
+					</tr>
+					<tr>
+						<th scope="row">Taxes</th>
+						<td>$XX.00</td>
+					</tr>
+					<tr class="last">
+						<th scope="row">Services</th>
+						<td>$XX.00</td>
+					</tr>
+				</table>
+				<div class="row buttons">
+					<div class="col-sm-6"><button class="btn btn-primary">CANCEL</button></div>
+					<div class="col-sm-6"><button class="btn btn-warning">SAVE</button></div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card">
+	<div class="container-fluid">
+		<h3 class="title"><b>Notes for Provider</b>
+		<button class="btn btn-primary float-right">EDIT</button></h3>
+		<div class="row">
+			<div class="col-md-8">
+				<textarea class="col-md-10">Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here Customer notes here</textarea>
+				<p class="">
+					<button class="btn btn-primary">CANCEL</button>
+					<button class="btn btn-warning">SAVE</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
