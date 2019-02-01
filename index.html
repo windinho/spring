@@ -31,7 +31,7 @@
 		border-radius: 70px;
 	}
 	img {
-		max-width: 100%
+		/*max-width: 100vw;*/
 	}
 	.header {
 		position: relative;
@@ -95,14 +95,16 @@
 	}
 	section.phone #phone {
 		position: absolute;
-		top: -100px;
-		left: 400px;
+		    bottom: 0;
+    left: 30%;
+    max-height: 136%;
+    min-height: 100%;
 	}
 	section.phone div {
 		position: absolute;
 		color: #fff;
-		top: 50px;
-		left: 700px;
+		top: 18%;
+		left: 52%;
 	}
 	footer {
 		padding: 20px;
@@ -125,7 +127,7 @@
 		<a class="nav-link" href="#"><button id="work" type="button">Work With Us</button></a>
 	</nav>
 	<section class="header">
-		<img id="header-img" src="img/header.png">
+		<img class="w-100" src="img/header.png">
 		<div id="text" class="text-white">
 			<h1><b>Jacksonville Gutter Cleaning <br>Services on YOUR Schedule!</b></h1>
 			<h3>Get a free quote and easily book on demand lawn care <br>from our professional, insured fleet.</h3>
@@ -135,7 +137,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="mt">
+	<section class="mt container">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -149,7 +151,7 @@
 		</div>
 	</section>
 	<section class="mt">
-		<img src="img/4-steps.png">
+		<img class="w-100" src="img/4-steps.png">
 	</section>
 	<section class="grey">
 		<h5 class="text-center"><b>How Plowz & Mowz Works</b></h5>
@@ -201,15 +203,17 @@
 		</div>
 	</section>
 	<section class="phone">
-		<img src="img/image.png">
-		<img id="phone" src="img/phone-mockup.png">
-		<div class="text-center">
-			<h2>Looking to upgrade <br>your lawn?</h2>
-			<button class="btn blue btn-primary">ORDER NOW</button>
-		</div>
+		<img class="w-100" src="img/image.png">
+			<img id="phone" class="img-fluid" src="img/phone-mockup.png">
+		<!-- <div class="container"> -->
+			<div class="text-center">
+				<h2>Looking to upgrade <br>your lawn?</h2>
+				<button class="btn blue btn-primary">ORDER NOW</button>
+			</div>
+		<!-- </div> -->
 	</section>
 	<footer class="text-center">
-		<img src="img/footer.png">
+		<img class="img-fluid" src="img/footer.png">
 	</footer>
 </body>
 </html>
